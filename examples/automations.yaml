@@ -1,0 +1,49 @@
+# Example Home Assistant automations
+# Use these to test ha-automation-studio analyzer and optimizer
+
+# Example 1: Motion light (basic)
+alias: Hallway motion light
+trigger:
+  - platform: state
+    entity_id: binary_sensor.hallway_motion
+    to: "on"
+action:
+  - service: light.turn_on
+    target:
+      entity_id: light.hallway
+
+---
+
+# Example 2: Motion light with sunset condition (better)
+alias: Bedroom motion light after sunset
+trigger:
+  - platform: state
+    entity_id: binary_sensor.bedroom_motion
+    to: "on"
+condition:
+  - condition: sun
+    after: sunset
+action:
+  - service: light.turn_on
+    target:
+      entity_id: light.bedroom
+mode: single
+
+---
+
+# Example 3: Door notification at night
+alias: Front door notification at night
+trigger:
+  - platform: state
+    entity_id: binary_sensor.front_door
+    to: "on"
+condition:
+  - condition: time
+    after: "22:00:00"
+    before: "06:00:00"
+action:
+  - service: notify.mobile_app
+    data:
+      title: "Security Alert"
+      message: "Front door opened at night"
+mode: single
