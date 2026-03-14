@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🏠 Home Assistant Automation Studio
+# ð  Home Assistant Automation Studio
 
 **AI toolkit for generating, analyzing and improving Home Assistant automations.**
 
@@ -12,7 +12,7 @@
 
 *Stop writing YAML by hand. Describe what you want, get a working automation.*
 
-[Quick Start](#-quick-start) · [Features](#-features) · [Examples](#-examples) · [Roadmap](#️-roadmap) · [Contributing](#-contributing)
+[Quick Start](#-quick-start) Â· [Features](#-features) Â· [Examples](#-examples) Â· [Roadmap](#ï¸-roadmap) Â· [Contributing](#-contributing)
 
 </div>
 
@@ -20,7 +20,7 @@
 
 ## The problem
 
-Home Assistant automations are powerful — but YAML is painful.
+Home Assistant automations are powerful â but YAML is painful.
 
 New users spend hours on syntax errors. Experienced users maintain hundreds of automations with no tooling. Everyone debugs automation logic by trial and error.
 
@@ -28,18 +28,18 @@ New users spend hours on syntax errors. Experienced users maintain hundreds of a
 
 ---
 
-## ✨ Features
+## â¨ Features
 
 | Feature | Description |
 |---|---|
-| 🤖 **Generate** | Natural language → valid HA YAML in seconds |
-| 🔍 **Analyze** | Detect missing fields, logic errors, bad patterns |
-| ⚡ **Optimize** | Debounce, modes, trigger improvements suggested automatically |
-| 🖥️ **CLI** | Works in terminal, scripts, CI pipelines |
+| ð¤ **Generate** | Natural language â valid HA YAML in seconds |
+| ð **Analyze** | Detect missing fields, logic errors, bad patterns |
+| â¡ **Optimize** | Debounce, modes, trigger improvements suggested automatically |
+| ð¥ï¸ **CLI** | Works in terminal, scripts, CI pipelines |
 
 ---
 
-## 📦 Quick Start
+## ð¦ Quick Start
 
 ```bash
 # 1. Clone and install
@@ -57,7 +57,7 @@ python cli.py generate "turn on bedroom light when motion after sunset"
 
 ---
 
-## 💡 Examples
+## ð¡ Examples
 
 ### Generate an automation from plain English
 
@@ -90,10 +90,10 @@ python cli.py analyze my_automations.yaml
 ```
 
 ```
-⚠ WARNING  Missing debounce on binary_sensor.motion — may trigger repeatedly
-⚠ WARNING  No mode set — defaults to single, consider restart for motion lights
-ℹ INFO     Condition block could use time_pattern trigger instead
-✓ No critical issues found
+â  WARNING  Missing debounce on binary_sensor.motion â may trigger repeatedly
+â  WARNING  No mode set â defaults to single, consider restart for motion lights
+â¹ INFO     Condition block could use time_pattern trigger instead
+â No critical issues found
 ```
 
 ### Optimize and apply improvements
@@ -104,46 +104,46 @@ python cli.py optimize my_automations.yaml --output improved.yaml
 
 ---
 
-## 📁 Project Structure
+## ð Project Structure
 
 ```
 ha-automation-studio/
-├── cli.py                          # Entry point — generate / analyze / optimize
-├── ha_automation_studio/
-│   ├── generator.py                # Natural language → YAML
-│   ├── analyzer.py                 # Structural validation + AI analysis
-│   ├── optimizer.py                # Improvement suggestions
-│   └── prompts.py                  # AI prompt templates (easy to customize)
-├── examples/
-│   └── automations.yaml            # Ready to test examples
-├── tests/                          # pytest test suite
-└── docs/
-    ├── ARCHITECTURE.md
-    └── CONTRIBUTING.md
+âââ cli.py                          # Entry point â generate / analyze / optimize
+âââ ha_automation_studio/
+â   âââ generator.py                # Natural language â YAML
+â   âââ analyzer.py                 # Structural validation + AI analysis
+â   âââ optimizer.py                # Improvement suggestions
+â   âââ prompts.py                  # AI prompt templates (easy to customize)
+âââ examples/
+â   âââ automations.yaml            # Ready to test examples
+âââ tests/                          # pytest test suite
+âââ docs/
+    âââ ARCHITECTURE.md
+    âââ CONTRIBUTING.md
 ```
 
 ---
 
-## 🗺️ Roadmap
+## ðºï¸ Roadmap
 
-**Phase 1 — MVP CLI** *(current)*
+**Phase 1 â MVP CLI** *(current)*
 - [x] `generate` command
 - [x] `analyze` command with structural validation
 - [x] `optimize` command
 - [ ] `--stdin` support for pipe workflows
 
-**Phase 2 — Developer Tools**
+**Phase 2 â Developer Tools**
 - [ ] Home Assistant API integration (live entity discovery)
 - [ ] Automation debugging mode
 - [ ] OpenAI + local LLM support (Ollama)
 - [ ] `--watch` mode for auto-analysis on file save
 
-**Phase 3 — Home Assistant Integration**
+**Phase 3 â Home Assistant Integration**
 - [ ] Home Assistant Add-on
 - [ ] REST API
 - [ ] Web UI
 
-**Phase 4 — AI Agents**
+**Phase 4 â AI Agents**
 - [ ] Automation reasoning engine
 - [ ] Frigate camera event analysis
 - [ ] ESPHome configuration generation
@@ -151,7 +151,7 @@ ha-automation-studio/
 
 ---
 
-## 🤝 Contributing
+## ð¤ Contributing
 
 Contributions are very welcome. See [CONTRIBUTING.md](docs/CONTRIBUTING.md).
 
@@ -163,14 +163,23 @@ Contributions are very welcome. See [CONTRIBUTING.md](docs/CONTRIBUTING.md).
 
 ---
 
-## 📄 License
+## ð License
 
-MIT — see [LICENSE](LICENSE).
+MIT â see [LICENSE](LICENSE).
 
 ---
 
-## 🔗 Acknowledgements
+## ð Acknowledgements
 
-- [Home Assistant](https://www.home-assistant.io/) — the best open source home automation platform
-- [Anthropic Claude](https://www.anthropic.com/) — AI models powering this toolkit
+- [Home Assistant](https://www.home-assistant.io/) â the best open source home automation platform
+- [Anthropic Claude](https://www.anthropic.com/) â AI models powering this toolkit
 - The Home Assistant community for inspiration and feedback
+
+---
+
+## Support
+
+If you find this project useful, consider supporting its development:
+
+<a href="https://buymeacoffee.com/macsiem" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="50" ></a>
+<a href="https://www.paypal.com/donate/?hosted_button_id=Y967H4PLRBN8W" target="_blank"><img src="https://img.shields.io/badge/PayPal-Donate-blue?logo=paypal&logoColor=white" alt="PayPal Donate" height="50" ></a>
